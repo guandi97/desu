@@ -7,18 +7,18 @@ HTTP/1.1 200 OK
 <meta charset="UTF-8">
 <script type="text/javascript">
 function repBody(m,u){
- var x=new XMLHttpRequest();
+ var x=new XMLHttpRequest()
  if("withCredentials" in x){
-  x.open(m,u,true);
+  x.open(m,u,true)
  }else if(typeof XDomainRequest!="undefined"){
-  x=new XDomainRequest();
-  x.open(m, u);
- }else
-  x=null;
+  x=new XDomainRequest()
+  x.open(m, u)
+ }else{
+  x=null
  }
- xhr.setRequestHeader('Content-Type','text/plain');
- xhr.onload=function(){
-  t=xhr.responseText
+ x.setRequestHeader('Content-Type','text/plain')
+ x.onload=function(){
+  t=x.responseText
   p=JSON.parse(t)
   document.body.innerHTML=p 
  }
