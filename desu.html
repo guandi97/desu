@@ -47,7 +47,7 @@ function repBody(method, url) {
 			width: 450px;
 			height: 100vh;
 			left: 15%;
-			background: rgba(189,181,179,.3);
+			background: rgba(216,213,212,.3);
 		}
 		.list {
 			display: block;
@@ -58,7 +58,8 @@ function repBody(method, url) {
 			overflow: scroll;
 		}
 		.list_overlay {
-			background: url('http://i.imgur.com/mZp9Xj7.png');
+			//background: url('http://i.imgur.com/mZp9Xj7.png');
+			background: url('overlay.png');
 			position: absolute;
 			top: 0%;
 			width: 450px;
@@ -70,11 +71,12 @@ function repBody(method, url) {
 		::-webkit-scrollbar {
 			display: none;
 		}
-		@font-face {
-			font-family: ravepartywide;
-			src: url('http://a.pomf.se/fzszgx.ttf');
-			font-stretch: ultra-expanded;
-		}
+@font-face {
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Jura DemiBold'), local('Jura-DemiBold'), url(http://fonts.gstatic.com/s/jura/v7/eDdeCs52Irmcx7ewX4qPegLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
 		input {
 			clear: both;
 			display: block;
@@ -89,11 +91,11 @@ function repBody(method, url) {
 			cursor: pointer; 
 			cursor: hand;
 
-			font-family: ravepartywide;
+			font-family: 'Jura';
 			color: #ffffff;
 			letter-spacing: 12px;
 			text-align: center;
-			font-size: 90%;
+			font-size: 130%;
 		}
 	</style>
 </head>
