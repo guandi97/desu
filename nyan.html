@@ -3,39 +3,28 @@ HTTP/1.1 200 OK
 Access-Control-Allow-Origin: *
 
 
-
 <html>
 <meta charset="UTF-8">
 <script type="text/javascript">
-
-function createCORSRequest(method, url) {
-  var xhr = new XMLHttpRequest();
-  if ("withCredentials" in xhr) {
-    // XHR for Chrome/Firefox/Opera/Safari.
-    xhr.open(method, url, true);
-  } else if (typeof XDomainRequest != "undefined") {
-    // XDomainRequest for IE.
-    xhr = new XDomainRequest();
-    xhr.open(method, url);
-    // CORS not supported.
-    xhr = null;
-  }
-  xhr.setRequestHeader('Content-Type', 'text/plain');
-
-  return xhr;
-}
-
-function repBody(method, url) {
-	var xhr = createCORSRequest(method,url)
-	xhr.onload = function() {
-		text=xhr.responseText
-		parText=JSON.parse(text)
-		document.body.innerHTML=parText
-	}
-	xhr.send()
+function repBody(m,u){
+ var x=new XMLHttpRequest();
+ if("withCredentials" in x){
+  x.open(m,u,true);
+ }else if(typeof XDomainRequest!="undefined"){
+  x=new XDomainRequest();
+  x.open(m, u);
+ }else
+  x=null;
+ }
+ xhr.setRequestHeader('Content-Type','text/plain');
+ xhr.onload=function(){
+  t=xhr.responseText
+  p=JSON.parse(t)
+  document.body.innerHTML=p 
+ }
+ x.send()
 }
 </script>
-
 <body>
 <script type="text/javascript">
 repBody('GET','http://github-raw-cors-proxy.herokuapp.com/guandi97/desu/master/desu.html')
