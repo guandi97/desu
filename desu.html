@@ -50,12 +50,17 @@ function repBody(method, url) {
 			left: 15%;
 			background: rgba(168,165,164,.3);
 		}
+		.firefox_plox {
+			height: 100vh;
+			overflow: hidden;
+		}
 		.list {
 			display: block;
-			width: 400px;
+			width: 434px;
 			height: 100vh;
 			margin: auto;
 			clear: both;
+			margin-right: -16px;
 			overflow: scroll;
 		}
 		.list_overlay {
@@ -69,7 +74,13 @@ function repBody(method, url) {
 			pointer-events: none;
 		}
 		::-webkit-scrollbar {
-			display: none;
+			//display: none;
+		}
+		@font-face {
+			font-family: 'Jura';
+			font-style: normal;
+			font-weight: 600;
+  			src: local('Jura DemiBold'), local('Jura-DemiBold'), url(http://fonts.gstatic.com/s/jura/v7/eDdeCs52Irmcx7ewX4qPegLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
 		}
 		@font-face {
 			font-family: 'ravepartywide';
@@ -89,11 +100,13 @@ function repBody(method, url) {
 			cursor: pointer; 
 			cursor: hand;
 
-			font-family: 'ravepartywide';
+			//font-family: 'ravepartywide';
+			font-family: 'Jura';
 			color: #ffffff;
 			letter-spacing: 12px;
 			text-align: center;
-			font-size: 90%;
+			//font-size: 90%;
+			font-size: 120%;
 		}
 	</style>
 </head>
@@ -104,6 +117,7 @@ function repBody(method, url) {
 		<img src='http://i.imgur.com/E0uUB3x.jpg' width=231 height=389>
 	</div>
 	<div class="list_underlay">
+		<div class="firefox_plox">
 		<div class="list">
 			<br>
 			<br>
@@ -130,6 +144,7 @@ function repBody(method, url) {
 			<br>
 			<br>
 			<br>
+		</div>
 		</div>
 	</div>
 	<div class="list_overlay"></div>
