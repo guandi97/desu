@@ -5,7 +5,7 @@ HTTP/1.1 200 OK
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head><title>
-	nyan nyan!
+	nyaa~~
 </title><meta name="description" content="Unleash your inner weeb desu~ &lt;3" />
     <style type="text/css">
         .underlay {
@@ -64,12 +64,10 @@ HTTP/1.1 200 OK
             height: 100%;
             background: url('http://i.imgur.com/flCiSsX.jpg') repeat scroll 0% 0% transparent;
         }
-        .desuCounter {
-            position: fixed; 
-            bottom: 10px;
-            left: 10px;
-            opacity: 1;
-        }
+	.back {
+		z-index: 5;
+		position: relative;
+	}
     </style>
 
 
@@ -89,4 +87,8 @@ HTTP/1.1 200 OK
    <div class="overlay">
 
     </div>
-</div>
+    </div>
+	<div class="back"> 
+                <input type='button' value="back" onclick='repBody("GET","http://github-raw-cors-proxy.herokuapp.com/guandi97/desu/master/desu.html")'/>
+        </div>
+</body>
