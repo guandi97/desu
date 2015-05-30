@@ -1,0 +1,44 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Headers: Origin
+Access-Control-Allow-Origin: *
+
+
+
+<html>
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+function createCORSRequest(method, url) {
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr) {
+    // XHR for Chrome/Firefox/Opera/Safari.
+    xhr.open(method, url, true);
+  } else if (typeof XDomainRequest != "undefined") {
+    // XDomainRequest for IE.
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+    // CORS not supported.
+    xhr = null;
+  }
+  xhr.setRequestHeader('Content-Type', 'text/plain');
+
+  return xhr;
+}
+
+function repBody(method, url) {
+	var xhr = createCORSRequest(method,url)
+	xhr.onload = function() {
+		text=xhr.responseText
+		parText=JSON.parse(text)
+		document.body.innerHTML=parText
+	}
+	xhr.send()
+}
+</script>
+
+<body>
+<script type="text/javascript">
+repBody('GET','http://github-raw-cors-proxy.herokuapp.com/guandi97/desu/master/desu.html')
+</script>
+</body>
+</html>
