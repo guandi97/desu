@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 
 <html>
 <script type="text/javascript">
@@ -44,34 +45,37 @@ function repBody(method, url) {
 			box-shadow: none !important;
 			outline: none !important;
 		}
-		html {
-			margin: auto;
-		}
 		body {
-			position: relative;
-			margin: auto;
-			verticle-align: middle;
-			width: 1024px;
-			height: 768px;
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			display: block;
+			height: 100%;
 			background: url('http://i.imgur.com/mbZOgqj.png') 100% 100%;
 			background-size: cover;
-			overflow: hidden;
-			text-align: center;
 		}
 		.picto {
 			position: absolute;
-			top: calc(50% - 500px);
-			left: calc(50% - 1000px);
+			left: 50%;
+			top: 50%;
+			width: 2000px;
+			height: 1200px;
+			margin-left: -1000px;
+			margin-top: -600px;
+			display: block;
 			pointer-events: none;
+			background: url('http://a.pomf.se/oceqcv.png');
 		}	
 		.list_underlay {
 			position: absolute;
-			width: 425px;
+			left: 50%;
+			top: 50%;
+			width: 424px;
 			height: 768px;
-			left: calc(50% - 212px);
-			top: calc(50% - 275px);
-			<input type='button' style='background:url("http://i.imgur.com/xGazt3j.png")' onclick='repBody("GET","http://github-raw-cors-proxy.herokuapp.com/guandi97/desu/master/mio.html")'/>
-			//background: rgba(231,215,209,.4);
+			margin-left: -212px;
+			margin-top: -374px;
 		}
 		.firefox_plox {
 			height: 1024px;
@@ -89,10 +93,12 @@ function repBody(method, url) {
 		}
 		.list_overlay {
 			position: absolute;
-			width: 425px;
+			width: 424px;
 			height: 768px;
-			left: calc(50% - 212px);
-			top: calc(50% - 275px);
+			left: 50%;
+			top: 50%;
+			margin-left: -212px;
+			margin-top: -374px;
 			background: url('http://i.imgur.com/rsTNmpa.png');
 			background-size: 450px 768px;
 			pointer-events: none;
@@ -157,8 +163,6 @@ function repBody(method, url) {
 		</div>
 	</div>
 	<div class="list_overlay"></div>
-	<div class="picto">
-		<img src='http://a.pomf.se/oceqcv.png'>
-	</div>
+	<div class="picto"></div>
 </body>
 </html>
