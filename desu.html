@@ -33,31 +33,48 @@ function repBody(method, url) {
 <head>
 	<title>cancer desu~</title>
 	<style type="text/css">
+		footer {
+			visibility: visible;
+		}
+	</style>
+</head>
+<body>
+	<style type="text/css">
+		html {
+			margin: auto;
+		}
 		body {
+			position: relative;
+			margin: auto;
+			verticle-align: middle;
+			width: 1024px;
+			height: 768px;
 			background: url('http://i.imgur.com/mbZOgqj.png') 100% 100%;
 			background-size: cover;
+			overflow: hidden;
+			text-align: center;
 		}
 		.picto {
 			position: absolute;
-			top: 25%;
+			top: 30%;
 			left: 66%;
 		}	
 		.list_underlay {
 			position: absolute;
 			top: 0%;
 			width: 425px;
-			height: 100vh;
+			height: 768px;
 			left: 15%;
 			background: rgba(168,165,164,.3);
 		}
 		.firefox_plox {
-			height: 100vh;
+			height: 1024px;
 			overflow: hidden;
 		}
 		.list {
 			display: block;
 			width: 424px;
-			height: 100vh;
+			height: 768px;
 			margin: auto;
 			clear: both;
 			margin-right: -16px;
@@ -68,9 +85,9 @@ function repBody(method, url) {
 			position: absolute;
 			top: 0%;
 			width: 450px;
-			height: 100vh;
+			height: 768px;
 			left: 15%;
-			background-size: 450px 100vh;
+			background-size: 450px 768px;
 			pointer-events: none;
 		}
 		::-webkit-scrollbar {
@@ -92,7 +109,7 @@ function repBody(method, url) {
 			margin-left: 50px;
 			margin-top: 69px;
 
-			background: transparent url('http://i.imgur.com/VM8dxYk.png');
+			background: transparent url('http://i.imgur.com/QHO6wRb.png');
 			width: 300px;
 			height: 37px;
 			border: 0px;
@@ -108,11 +125,10 @@ function repBody(method, url) {
 			//font-size: 90%;
 			font-size: 120%;
 		}
+		footer {
+			visibility: hidden;
+		}
 	</style>
-</head>
-<body>
-	<div>
-
 	<div class="picto">
 		<img src='http://i.imgur.com/E0uUB3x.jpg' width=231 height=389>
 	</div>
@@ -148,7 +164,5 @@ function repBody(method, url) {
 		</div>
 	</div>
 	<div class="list_overlay"></div>
-
-	</div>
 </body>
 </html>
