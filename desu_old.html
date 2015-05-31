@@ -56,17 +56,16 @@ function repBody(method, url) {
 		}
 		.picto {
 			position: absolute;
-			top: calc(50% - 600px);
-			left: calc(50% - 1000px);
-			pointer-events: none;
+			top: 30%;
+			left: 66%;
 		}	
 		.list_underlay {
 			position: absolute;
 			top: 0%;
 			width: 425px;
 			height: 768px;
-			left: calc(50% - 212px);
-			//background: rgba(231,215,209,.4);
+			left: 15%;
+			background: rgba(231,215,209,.4);
 		}
 		.firefox_plox {
 			height: 1024px;
@@ -79,16 +78,15 @@ function repBody(method, url) {
 			margin: auto;
 			clear: both;
 			margin-right: -16px;
-			overflow-y: scroll;
-			overflow-x: hidden;
+			overflow: scroll;
 		}
 		.list_overlay {
 			background: url('http://i.imgur.com/rsTNmpa.png');
 			position: absolute;
 			top: 0%;
-			width: 425px;
+			width: 450px;
 			height: 768px;
-			left: calc(50% - 212px);
+			left: 15%;
 			background-size: 450px 768px;
 			pointer-events: none;
 		}
@@ -108,13 +106,12 @@ function repBody(method, url) {
 		input {
 			clear: both;
 			display: block;
-			margin-left: -100px;
-			margin-top: 5px;
-			margin-bottom: 5px;
+			margin-left: 50px;
+			margin-top: 69px;
 
-			//background: transparent url('banner.png');
-			width: 600px;
-			height: 100px;
+			background: transparent url('http://i.imgur.com/DIqQw0L.png');
+			width: 300px;
+			height: 37px;
 			border: 0px;
 
 			cursor: pointer; 
@@ -132,13 +129,20 @@ function repBody(method, url) {
 			visibility: hidden;
 		}
 	</style>
+	<div class="picto">
+		<img src='http://i.imgur.com/E0uUB3x.jpg' width=231 height=389>
+	</div>
 	<div class="list_underlay">
 		<div class="firefox_plox">
 		<div class="list">
-			<input type='button' value="DERP"/>
-			<input type='button' style='background:url("http://i.imgur.com/OUCnTO9.png")' onclick='repBody("GET","http://github-raw-cors-proxy.herokuapp.com/guandi97/desu/master/desudesu.html")'/>
-			<input type='button' style='background:url("http://i.imgur.com/MV4fo6M.png")' onclick='repBody("GET","http://github-raw-cors-proxy.herokuapp.com/guandi97/desu/master/mio.html")'/>
-			<input type='button' style='background:url("http://i.imgur.com/xGazt3j.png")' onclick='repBody("GET","http://github-raw-cors-proxy.herokuapp.com/guandi97/desu/master/poi.html")'/>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<input type='button' value="DESUDESU" onclick='repBody("GET","http://github-raw-cors-proxy.herokuapp.com/guandi97/desu/master/desudesu.html")'/>
+			<input type='button' value="AZU-NYAN" onclick='repBody("GET","http://github-raw-cors-proxy.herokuapp.com/guandi97/desu/master/mio.html")'/>
+			<input type='button' value="POI POI POI" onclick='repBody("GET","http://github-raw-cors-proxy.herokuapp.com/guandi97/desu/master/poi.html")'/>
 			<input type='button' value="DERP"/>
 			<input type='button' value="DERP"/>
 			<input type='button' value="DERP"/>
@@ -160,8 +164,5 @@ function repBody(method, url) {
 		</div>
 	</div>
 	<div class="list_overlay"></div>
-	<div class="picto">
-		<img src='Untitled-3.png'>
-	</div>
 </body>
 </html>
